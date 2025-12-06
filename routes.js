@@ -33,6 +33,9 @@ router.post("/register", registeration);
 // ===============POST: /api/users/login====================
 router.post("/login", loginUser);
 
+// get all home products
+router.get("/homeProducts/getAll" , getAllHomeProducts);
+
 
 router.use(authMiddleware);
 
@@ -60,8 +63,7 @@ router.patch("/partialUpdate/:id" , partialUpdateById );
 // post home products
 router.post("/homeProducts" , createHomeProducts);
 
-// get all home products
-router.get("/homeProducts/getAll" , getAllHomeProducts);
+
 
 // post veg products
 router.post("/vegproducts/save" , createVegProducts);
